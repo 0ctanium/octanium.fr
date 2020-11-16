@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Octanium</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Octanium's website. Here you can see all his public projects and his creations in general." />
+
+        <link rel="stylesheet" href="styles.css">
+        <link
+                rel="stylesheet"
+                href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css"
+        />
+
+        <noscript>
+            <style>
+                [data-simplebar] {
+                    overflow: auto !important;;
+                }
+
+                body, #container {
+                    -ms-overflow-style: scrollbar !important;;
+                    scrollbar-width: 12px !important;;
+                }
+
+                body::-webkit-scrollbar,
+                #container::-webkit-scrollbar {
+                    display: auto !important;
+                }
+
+                body.loading #container {
+                    overflow: auto !important;;
+                }
+
+                #title .title {
+                    display: block !important;;
+                }
+
+                #loader {
+                    display: none !important;;
+                }
+            </style>
+        </noscript>
+    </head>
+    <body class="loading">
+        <div id="loader">
+            <div class="loader-container">
+                <span id="percent">0%</span>
+                <div class="progress-bar">
+                    <div class="progress" id="loader-progress"></div>
+                </div>
+            </div>
+        </div>
+        <canvas id="canvas1"></canvas>
+        <div id="container">
+            <div id="title">
+                <h1 class="title">Octanium</h1>
+                <h3 class="subtitle">Page en cours de construction</h3>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+        <script src="main.js"></script>
+
+<!--        <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>-->
+    </body>
+</html>

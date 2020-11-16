@@ -1,0 +1,137 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Trispace&display=swap');   Imported by javascript */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+body {
+    background: #272727;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container {
+    overflow: auto;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+canvas#canvas1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -4;
+    opacity: 1;
+}
+
+
+/* *********************** */
+/*        SCROLLBAR        */
+/* *********************** */
+body, #container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar,
+#container::-webkit-scrollbar {
+    display: none;
+}
+
+body.loading #container {
+    overflow: hidden;
+}
+
+
+/* *********************** */
+/*         LOADER          */
+/* *********************** */
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    transition: opacity ease-out .2s .2s;
+}
+
+body:not(.loading) #loader {
+    display: none;
+}
+
+#loader #percent {
+    margin: auto;
+    color: rgba(255, 255, 255, 0.60);
+    font-size: 22px;
+}
+
+#loader .loader-container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#loader .progress-bar {
+    width: 100px;
+    height: 4px;
+    margin-top: 12px;
+    border-radius: 4px;
+    background: #0b0b0b;
+    position: relative;
+    display: flex;
+    justify-items: flex-start;
+}
+
+#loader .progress-bar .progress {
+    width: 0px;
+    height: 4px;
+    background: #ffffff40;
+}
+
+
+/* *********************** */
+/*          TITLE          */
+/* *********************** */
+#title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+}
+
+#title .title {
+    font-family: 'Trispace', Verdana, serif;
+    display: block;
+    opacity: 0;
+    color: white;
+    font-size: 140px;
+    font-weight: 200;
+    cursor: default;
+}
+
+#title .subtitle {
+    position: relative;
+    font-family: 'Roboto', Verdana, serif;
+    display: block;
+    color: white;
+    opacity: 0;
+    top: 50px;
+}
+
+body.loaded #title .subtitle {
+    transition: opacity ease-out .8s 1s, top ease-out .8s 1s;
+    opacity: 1;
+    top: 0;
+}
